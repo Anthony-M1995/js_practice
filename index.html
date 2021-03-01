@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="text/javascript" src="./javascript/script.js"></script>
+    <title>javascript</title>
+</head>
+
+<body>
+
+    <div class="demo1">
+        <p id="name">Anthony M</p>
+        <button type="button" onclick='myFunction1()'>Dont Click Me &#128545</button>
+        <button type="button" onclick='myFunction2()'>Click Me he he! &#128517</button>
+    </div>
+    <div class="demo2">
+        <h1>Adding</h1>
+        <form action="">
+            <label for="fvalue">First value:</label>
+            <input type="text" id="fvalue" placeholder="Enter first value"> <br> <br>
+            <label for="svalue">Second value:</label>
+            <input type="text" id="svalue" placeholder="Enter second value"> <br> <br>
+            <label for="result">Result:</label>
+            <input type="text" id="result" placeholder=""> <br> <br>
+            <input type="button" value="Calculate">
+        </form>
+
+    </div>
+    <script>
+        function myFunction3() {
+            var a = 205;
+            var b = 183;
+            var c = a + b;
+            var total = document.getElementById('total');
+            return total.innerHTML = c;
+
+        }
+    </script>
+
+
+
+
+    <script>
+        function myFunction1() {
+            var x = document.getElementById("name");
+            return x.innerHTML = "Kulandai Yesu";
+        };
+
+        function myFunction2() {
+            var x = document.getElementById("name");
+            return x.innerHTML = "Anthony M";
+        }
+    </script>
+
+</body>
+
+</html>
