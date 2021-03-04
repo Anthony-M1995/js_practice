@@ -16,33 +16,6 @@
         <button type="button" onclick='myFunction1()'>Dont Click Me &#128545</button>
         <button type="button" onclick='myFunction2()'>Click Me he he! &#128517</button>
     </div>
-    <div class="demo2">
-        <h1>Adding</h1>
-        <form action="">
-            <label for="fvalue">First value:</label>
-            <input type="text" id="fvalue" placeholder="Enter first value"> <br> <br>
-            <label for="svalue">Second value:</label>
-            <input type="text" id="svalue" placeholder="Enter second value"> <br> <br>
-            <label for="result">Result:</label>
-            <input type="text" id="result" placeholder=""> <br> <br>
-            <input type="button" value="Calculate">
-        </form>
-
-    </div>
-    <script>
-        function myFunction3() {
-            var a = 205;
-            var b = 183;
-            var c = a + b;
-            var total = document.getElementById('total');
-            return total.innerHTML = c;
-
-        }
-    </script>
-
-
-
-
     <script>
         function myFunction1() {
             var x = document.getElementById("name");
@@ -54,6 +27,32 @@
             return x.innerHTML = "Anthony M";
         }
     </script>
+
+    <div>
+        <h1 id="name">Anthony M</h1>
+        <p id="para1">chrome console practice</p>
+        <p id="para2">console.log()</p>
+
+        <button type="button" onclick="myfunction3()">click to change content &#128517 </button>
+        <button type="button" onclick="myfunction4()">try this !  &#128517</button>
+    </div>
+    <script>
+
+        function myfunction3(){
+            var x = document.getElementById("para1");
+            return x.innerHTML = "haha! &#128517 that's it.", 
+            x.style.color = "red";
+        }
+
+        function myfunction4(){
+            var x = document.getElementById("para2");
+            return x.innerHTML = "now try in chrome.", 
+            x.style.color = "red";
+        }
+
+    
+    </script>
+
 
 </body>
 
