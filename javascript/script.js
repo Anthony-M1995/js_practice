@@ -47,3 +47,63 @@ function myFunction7() {
         y.style.color = "red" ;
     }
 }
+
+//q no.2
+function myFunction8() {
+    var x = 1 ;
+
+    if(x > 0) {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Positive",
+        y.style.color = "green" ;
+    }
+    else if (x < 0) {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Negative",
+        y.style.color = "red" ;
+    }
+    else {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Neutral",
+        y.style.color = "yellow" ;
+    }
+}
+function myFunction9() {
+    var x = -1 ;
+
+    if(x > 0) {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Positive",
+        y.style.color = "green" ;
+    }
+    else if (x < 0) {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Negative",
+        y.style.color = "red" ;
+    }
+    else {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Neutral",
+        y.style.color = "yellow" ;
+    }
+}
+function myFunction10() {
+    var x = 0 ;
+
+    if(x > 0) {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Positive",
+        y.style.color = "green" ;
+    }
+    else if (x < 0) {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Negative",
+        y.style.color = "red" ;
+    }
+    else {
+        var y = document.getElementById("ans1");
+        return y.innerHTML = "Neutral",
+        y.style.color = "yellow" ;
+    }
+}
+
