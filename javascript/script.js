@@ -107,3 +107,34 @@ function myFunction10() {
     }
 }
 
+// Q.no 3
+function myFunction11() {
+
+    var x = 6 ;
+    if(x > 0 && x%2 == 0) {
+        var y = document.getElementById("ans2");
+        return y.innerHTML = "Positive",
+        y.style.color = "green" ;
+    }
+
+    else {
+        var y = document.getElementById("ans2");
+        return y.innerHTML = "Negative",
+        y.style.color = "red" ;
+    } 
+}
+function myFunction12() {
+
+    var x = -5 ;
+    if(x > 0 && x%2 == 0) {
+        var y = document.getElementById("ans2");
+        return y.innerHTML = "Positive",
+        y.style.color = "green" ;
+    }
+
+    else {
+        var y = document.getElementById("ans2");
+        return y.innerHTML = "Negative",
+        y.style.color = "red" ;
+    } 
+}
