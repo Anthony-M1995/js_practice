@@ -98,6 +98,42 @@
         <button type="button" onclick="myFunction12()">click me -5</button> 
     </div>
 
+     <div>
+         <h1>Switch case practice </h1>
+        <p>Q.Find day of week by accepting its number eg. 1-> sunday, 2 -> monday</p>
+        <p id="ans3">hi</p>
+        <script>
+            var day = 1 ;
+            switch(day)
+            {
+                case 1:
+                    document.write(document.getElementById('ans3').innerHTML = 'Sunday');
+                    break;
+                case 2:
+                    document.write(document.getElementById('ans3').innerHTML = 'Monday');
+                    break;
+                case 3:
+                    document.write(document.getElementById('ans3').innerHTML = 'Tuesday');
+                    break;
+                case 4:
+                    document.write(document.getElementById('ans3').innerHTML = 'Wednesday');
+                    break;
+                case 5:
+                    document.write(document.getElementById('ans3').innerHTML = 'Thursday');
+                    break;
+                case 6:
+                    document.write(document.getElementById('ans3').innerHTML = 'Friday');
+                    break;
+                case 7:
+                    document.write(document.getElementById('ans3').innerHTML = 'Wrong Input');
+                    break;
+                default :
+                    document.write(document.getElementById('ans3').innerHTML = 'Saturday');
+                    break;
+            }
+        </script> 
+    </div>
+
 </body>
 
 </html>
