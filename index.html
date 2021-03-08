@@ -134,6 +134,42 @@
         </script> 
     </div>
 
+    <div>
+         <h1>Switch case practice </h1>
+        <p>Q.Find day of week by accepting its by string eg. monday </p>
+        <p id="ans4">hi</p>
+        <script>
+            var day = "monday" ;
+            switch(day)
+            {
+                case "sunday":
+                    document.write(document.getElementById('ans4').innerHTML = '1');
+                    break;
+                case "monday":
+                    document.write(document.getElementById('ans4').innerHTML = '2');
+                    break;
+                case "tuesday":
+                    document.write(document.getElementById('ans4').innerHTML = '3');
+                    break;
+                case "wednesday":
+                    document.write(document.getElementById('ans4').innerHTML = '4');
+                    break;
+                case "thursday":
+                    document.write(document.getElementById('ans4').innerHTML = '5');
+                    break;
+                case "friday":
+                    document.write(document.getElementById('ans4').innerHTML = '6');
+                    break;
+                case "saturday":
+                    document.write(document.getElementById('ans4').innerHTML = '7');
+                    break;
+                default :
+                    document.write(document.getElementById('ans4').innerHTML = 'wrong input');
+                    break;
+            }
+        </script> 
+    </div>
+
 </body>
 
 </html>
