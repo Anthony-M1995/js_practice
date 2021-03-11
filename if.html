@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If condition for grading</title>
+</head>
+<body>
+
+    <input type="text" id="mark" name="mark" placeholder="Enter your Mark">
+    <button type="button" onclick="grade()">Get Result</button>
+    <script>
+        function grade() {
+            var x = document.getElementById("mark").value ;
+            if (x>= 90) {
+                document.write("HAHA YOU DISTINCTION <h1>&#128540;</h1>");
+            }
+            else if (x>=80) {
+                document.write("S");
+            }
+            else if (x>=70) {
+                document.write("A+");
+            }
+            else if (x>=60) {
+                document.write("A");
+            }
+            else if (x>=50) {
+                document.write("B+");
+            }
+            else if (x>40) {
+                document.write("B") ;
+            }
+            else {
+                document.write("OH NO YOU FAIL <h1>&#128557;</h1>");
+            }
+        }
+    </script>
+</body>
+</html>
