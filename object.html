@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+
+<div>
+    <script>
+        var car = {
+            carBrand :'Tesla',
+            carModel :'Model 1',
+            price    : 35000,
+
+            teslaAutoPilot : function() {
+                return "<h1>AutoPilot</h1>";
+            }
+
+        }
+
+        document.write("<h1>" + car.teslaAutoPilot() + "</h1>");
+
+    </script>
+</div>
+
+<div>
+    <h1>Object Constructor</h1>
+    <script>
+        function cars(carBrand, carModel, price) {
+            this.carBrand = carBrand;
+            this.carModel = carModel;
+            this.price = price;
+            this.teslaAutoPilot = function() {
+                document.write("<h1>AutoPilot Function</h1>");
+            }
+        }
+
+        var c1 = new cars('Tesla', 'Model 1', 35000);
+        c1.teslaAutoPilot();
+        document.write("<h1>" + c1.carModel + "</h1>");
+    </script>
+</div>
+
+<div>
+    <script>
+        var car = {
+            car_Brand : "Honda",
+            car_Model : "Model 1",
+            price     : "35000",
+            autoPilot : function() {
+                document.write('AutoPilot');
+            }
+        }
+        
+        car.car_Brand = "Mahindra";
+        car.car_Modal = "Model Mahindra";
+        document.write('<h1>' + car.car_Modal + '</h1>');
+    </script>
+</div>
+    
+</body>
+</html>
