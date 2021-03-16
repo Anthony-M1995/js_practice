@@ -1,65 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object</title>
 </head>
+
 <body>
 
-<div>
-    <script>
-        var car = {
-            carBrand :'Tesla',
-            carModel :'Model 1',
-            price    : 35000,
+    <div>
+        <script>
+            var car = {
+                carBrand: 'Tesla',
+                carModel: 'Model 1',
+                price: 35000,
 
-            teslaAutoPilot : function() {
-                return "<h1>AutoPilot</h1>";
+                teslaAutoPilot: function () {
+                    return "<h1>AutoPilot</h1>";
+                }
+
             }
 
-        }
+            document.write("<h1>" + car.teslaAutoPilot() + "</h1>");
+        </script>
+    </div>
 
-        document.write("<h1>" + car.teslaAutoPilot() + "</h1>");
-
-    </script>
-</div>
-
-<div>
-    <h1>Object Constructor</h1>
-    <script>
-        function cars(carBrand, carModel, price) {
-            this.carBrand = carBrand;
-            this.carModel = carModel;
-            this.price = price;
-            this.teslaAutoPilot = function() {
-                document.write("<h1>AutoPilot Function</h1>");
+    <div>
+        <h1>Object Constructor</h1>
+        <script>
+            function cars(carBrand, carModel, price) {
+                this.carBrand = carBrand;
+                this.carModel = carModel;
+                this.price = price;
+                this.teslaAutoPilot = function () {
+                    document.write("<h1>AutoPilot Function</h1>");
+                }
             }
-        }
 
-        var c1 = new cars('Tesla', 'Model 1', 35000);
-        c1.teslaAutoPilot();
-        document.write("<h1>" + c1.carModel + "</h1>");
-    </script>
-</div>
+            var c1 = new cars('Tesla', 'Model 1', 35000);
+            c1.teslaAutoPilot();
+            document.write("<h1>" + c1.carModel + "</h1>");
+        </script>
+    </div>
 
-<div>
-    <script>
-        var car = {
-            car_Brand : "Honda",
-            car_Model : "Model 1",
-            price     : "35000",
-            autoPilot : function() {
-                document.write('AutoPilot');
+    <div>
+        <script>
+            var car = {
+                car_Brand: "Honda",
+                car_Model: "Model 1",
+                price: "35000",
+                autoPilot: function () {
+                    document.write('AutoPilot');
+                }
             }
-        }
-        
-        car.car_Brand = "Mahindra";
-        car.car_Modal = "Model Mahindra";
-        document.write('<h1>' + car.car_Modal + '</h1>');
-    </script>
-</div>
-    
+
+            car.car_Brand = "Mahindra";
+            car.car_Modal = "Model Mahindra";
+            document.write('<h1>' + car.car_Modal + '</h1>');
+        </script>
+    </div>
+
+    <div>
+        <p>Boolean Can be object if defined with new keyword</p>
+        <p>Numbers Can be object if defined with new keyword</p>
+        <p>Strings Can be object if defined with new keyword</p>
+        <p>Dates are always object</p>
+        <p>Maths are always object</p>
+        <p>Regular Expression are always object</p>
+
+
+        <h2>EX 1</h2>
+        <script>
+            var str1 = new String();
+            document.write('<h1>' + typeof(str1) + "</h1>");
+            var str1 = "string";
+            document.write('<h1>' + typeof(str1) + "</h1>");
+
+            var cars1 = {
+                car_Brand: "Honda",
+                car_Model: "Model 1",
+                price: "35000",
+                autoPilot: function () {
+                    document.write('AutoPilot');
+                }
+            }
+            cars1.fuelType = "Electric";
+            cars1.price = 50000;
+
+            document.write('<h1>' + typeof(cars1.price) + '</h1>');
+        </script>
+
+    </div>
+
 </body>
+
 </html>
