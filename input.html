@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Mainipulation</title>
+</head>
+<body>
+    <div>
+    <h1>Text Box</h1>
+    <input type="text1" id="text1" placeholder="Enter UR Name"> <br>
+    <br>
+    <button type="button" id="btn1" onclick="fn1()">Click Me!</button>
+
+    <script>
+        function fn1() {
+            var str = document.getElementById('text1').value;
+            alert("Hi " + str);
+        }
+    </script>
+    </div> 
+
+    <div>
+        <h1>Radio Button</h1>
+        <input id="rd1" type="radio" name="grp1" value="Anthony">Anthony</input> <br> <br>
+        <input id="rd2" type="radio" name="grp1" value="Suresh">Suresh</input> <br> <br>
+        <button id="btn2" type="button"  onclick="fnradio()">Click Me!</button>
+
+        <script>
+            function fnradio() {
+
+                var rd1 = document.getElementById('rd1');
+                var rd2 = document.getElementById('rd2');
+
+                if (rd1.checked == true) {
+                    alert("Hi " + rd1.value);
+                }else if (rd2.checked == true) {
+                    alert("Hi " + rd2.value);
+                }else {
+                    alert('Nothing selected');
+                }
+            }
+        </script>
+    </div>
+
+    <div>
+        <h1>Dropdown Menu</h1>
+        <select name="selectbox" id="selectbox">
+            <option value="Anthony">Anthony</option>
+            <option value="Suresh">Suresh</option>
+            <option value="Dinesh">Dinesh</option>
+            <option value="Yesu">Yesu</option>
+        </select>
+
+        <br><br>
+        <button type="button" onclick="fnselect()">click Me!</button>
+
+        <script>
+            function fnselect(){
+                var select = document.getElementById('selectbox');
+                alert("Hi " + select.options[select.selectedIndex].value);
+            }
+        </script>
+    </div>
+    
+</body>
+</html>
