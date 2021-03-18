@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Practice</title>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="input1" placeholder="enter 0 to 6">
+
+        <button type="button" onclick="demo()">Clike Me!</button>
+
+        <p id="hi"></p>
+    </div>
+    <script>
+        function demo() {
+
+            var days = Number(document.getElementById('input1').value);
+            var d = "THE DAY YOU SELECTED IS: "
+            switch (days) {
+                case 0:
+                    document.getElementById("hi").innerHTML = d + "Sunday";
+                    break;
+                case 1:
+                    document.getElementById("hi").innerHTML = d + "Monday";
+                    break;
+                case 2:
+                    document.getElementById("hi").innerHTML = d + "Tuesday";
+                    break;
+                case 3:
+                    document.getElementById("hi").innerHTML = d + "Wednesday";
+                    break;
+                case 4:
+                    document.getElementById("hi").innerHTML = d + "Thursday";
+                    break;
+                case 5:
+                    document.getElementById("hi").innerHTML = d + "Friday";
+                    break;
+                case 6:
+                    document.getElementById("hi").innerHTML = d + "Saturday";
+            }
+        }
+    </script>
+    
+</body>
+</html>
