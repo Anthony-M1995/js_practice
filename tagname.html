@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagname method</title>
+</head>
+<body>
+    <div>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    <p>This is paragraph</p>
+    </div>
+
+    <button onclick="myStyle()">Click Me!</button>
+    <button onclick="myStyle2()">Click Me!</button>
+    <button onclick="myStyle3()">Click Me!</button>
+    <button onclick="myStyle4()">RESET!</button>
+    <script>
+        function myStyle(){
+            var para = document.getElementsByTagName('p');
+
+            para[0].style.color = 'red';
+            para[1].style.color = 'green';
+            para[2].style.color = 'blue';
+            para[3].style.color = 'yellow';
+            para[4].style.color = 'orange';
+            para[5].style.color = 'lightblue';
+            para[6].style.color = 'purple';
+            para[7].style.color = 'brown';
+            para[8].style.color = 'lightgreen';
+            para[9].style.color = 'grey';
+            para[0].style.color = 'darkblue';
+        }
+
+        function myStyle2() {
+            var para = document.getElementsByTagName('p');
+            for(var i=0;i<para.length;i++){
+                para[i].style.fontWeight = '1000';
+            }
+        }
+        function myStyle3() {
+            var para = document.getElementsByTagName('p');
+            for(var i=0;i<para.length;i++){
+                para[i].style.fontSize = '25px';
+            }
+        }
+        function myStyle4() {
+            var para = document.getElementsByTagName('p');
+            for(var i=0;i<para.length;i++){
+                para[i].style = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
