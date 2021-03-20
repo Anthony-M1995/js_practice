@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop practice</title>
+</head>
+<body>
+
+    <div>
+        <h1>For loop Practice</h1> <br>
+
+        <label for="initial1"><b>Initial Value &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b></label>
+        <input style="width: 500px;" type="text" id="initial1" name="initial1" placeholder="Enter initial value for for-loop,Should be number"><br> <br>
+
+        <label for="condition1"> <b>Condition Value:</b></label>
+        <input style="width: 500px;" type="text" id="condition1" name="condition1" placeholder="Enter the condition End point,Should be number"><br> <br>
+
+        <label for="increment1"><b>Increment Value:</b></label>
+        <input style="width: 500px;" type="text" id="increment1" name="increment1" placeholder="Enter increment value,should be number"><br> <br>
+
+        <button type="button" onclick="myLoop1()">Start loop</button>
+
+        <p id="try1" style="text-align: center; 
+        color:red; 
+        font-weight:1000;
+        font-size:25px;
+        ">
+            hi
+        </p>
+    </div>
+    <script>
+
+        function myLoop1() {
+            var in1 = Number(document.getElementById("initial1").value);
+            var cnd1 = Number(document.getElementById("condition1").value);
+            var inc1 = Number(document.getElementById("increment1").value);
+            var prt1 = '';
+            for(var i=in1;i<cnd1;i+=inc1){
+                prt1+= '<h1>' + i + "</h1>" + '<br>';
+            }
+            document.getElementById("try1").innerHTML = prt1;
+        }
+
+    </script>
+    
+</body>
+</html>
