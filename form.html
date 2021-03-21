@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Validation Using Js</title>
+</head>
+<body>
+
+    <div>
+        <h1>Basic Form Validation</h1> <br>
+
+        <form action="action.html" onsubmit="return validate();">
+
+            <label for="uname">Username:</label>
+            <input id="uname" type="text" placeholder="Enter Your Name..."><br><br>
+
+            <label for="pword">Password:</label>
+            <input id="pword" type="password" placeholder="Enter Your Password..."><br><br>
+
+            <button type="submit">submit</button>
+
+        </form>
+    </div>
+
+    <script>
+        function validate(){
+            var username = document.getElementById('uname');
+            var password = document.getElementById('pword');
+
+            if(username.value.trim() == "") {
+                alert('please fill the username field');
+                return false;
+            }else if(password.value.trim("") == "") {
+                alert('please fill the password field');
+                return false;
+            }else if(password.value.trim().length<5) {
+                alert('password too short');
+                return false;
+            }else {
+                return true;
+            }
+        }
+    </script>
+
+    <div>
+        <h1>Simple Form Validation</h1> <br>
+
+        <form action="action.html" onsubmit="return validate2();">
+
+            <label for="uname2">Username:</label>
+            <input id="uname2" type="text" placeholder="Enter Your Name...">
+            <label id="error1" for="uname2" style="color: red; visibility:hidden;">invalid</label><br><br>
+
+            <label for="pword2">Password:</label>
+            <input id="pword2" type="password" placeholder="Enter Your Password...">
+            <label id="error2" for="pword2" style="color: red; visibility:hidden;">invalid</label><br><br>
+
+            <button type="submit">submit</button>
+
+        </form>
+    </div>
+
+    <script>
+        function validate2(){
+            var username = document.getElementById('uname2');
+            var password = document.getElementById('pword2');
+
+            if(username.value.trim() == "") {
+                //alert('please fill the username field');
+                document.getElementById('uname2').style.border = "2px solid red";
+                document.getElementById('error1').style.visibility = "visible";
+                return false;
+            }else if(password.value.trim("") == "") {
+                //alert('please fill the password field');
+                document.getElementById('pword2').style.border = "2px solid red";
+                document.getElementById('error2').style.visibility = "visible";
+                return false;
+            }else if(password.value.trim().length<5) {
+                alert('password too short');
+                document.getElementById('pword2').style.border = "2px solid red";
+                document.getElementById('error2').style.visibility = "visible";
+                return false;
+            }else {
+                return true;
+            }
+        }
+    </script>
+
+    <div>
+        <h1>Regular Expressions in Form Validation</h1>
+        <p>here U00 is used as a regular expression with case sensitive,start with U00 then only form will be submitted</p>
+
+        <form action="action.html" onsubmit="return validate3()">
+
+            <input id="uname3" type="text" placeholder="Username..."> <br>
+            <label id="error3" for="uname3" style="color: red; visibility:hidden;">invalid username</label>
+            <br><br>     
+            <button type="submit">submit</button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        function validate3() {
+            var username = document.getElementById('uname3').value;
+            var regx = /U00/;
+
+            if (regx.test(username)){
+                alert('username valid');
+                return true;
+            }else{
+                alert("invalid username");
+                document.getElementById('error3').style.visibility = "visible";
+                return false;
+            }
+
+        }
+    </script>
+
+    <div>
+        <h1>Regular Expressions practice 2</h1>
+        <p>regular expression method /[a-z A-Z][0-9][@] These three char should be filled there</p>
+        
+        <input id="uname4" type="text" placeholder="Username..."> <br>
+        <label id="error4" for="uname4" style="color: red; visibility:hidden;">invalid username</label>
+        <br><br>     
+        <button type="button" onclick="validate4()">submit</button>
+
+    </div>
+
+    <script>
+        function validate4() {
+            var username = document.getElementById('uname4').value;
+            var regx = /[a-z A-Z][0-9][@]/;
+
+            if(regx.test(username)) {
+                alert('valid username');
+            } else {
+                alert('username invalid');
+                document.getElementById('error4').style.visibility = "visible";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
