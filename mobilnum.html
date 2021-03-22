@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+
+     <div>
+        <h1>Form mobile number Validation</h1>
+        <p> by using regular expression mobile number can be validate</p>
+        <p>\d for digit instead of writing [0-9], \w for word instead of writing [a-z] </p>
+        <p>^ this used for start point check, * this used for end point check</p>
+        <p>for ex. /^[7-9]\d{9}/, [7-9] this for first digit start with 7-9 ,
+        here \d for digits , here {9} range of digits </p>
+    </div>
+    <div>
+        <input type="text" id="number" placeholder="mobile number">
+        <p id="num"></p>
+        <button type="button" onclick="mobValidate()">Validate mobile</button>
+    </div>
+
+    <script>
+        function mobValidate() {
+            var numbers = document.getElementById('number').value;
+            var regx = /^[6-9]\d{9}$/;
+
+            if(regx.test(numbers)) {
+                document.getElementById('num').innerHTML = "VALID";
+                document.getElementById('num').style.color = "green";
+                document.getElementById('num').style.fontWeight = "bold";
+            } else{
+                document.getElementById('num').innerHTML = "INVALID";
+                document.getElementById('num').style.color = "red";
+                document.getElementById('num').style.fontWeight = "bold";
+            }
+        }
+    </script>
+
+    <div>
+        <h1>Form email Validation</h1>
+        <p>by using regular expression email can be validate</p>
+        <p>eg. /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,9})(.[a-z]{2,8})?$/ </p>
+
+        <img src="./img/emil-validate.png" alt="email" style="position: absolute;
+        right:0px;">
+    </div>
+    <div>
+        <input type="text" id="email" placeholder="email">
+        <p id="emails"></p>
+        <button type="button" onclick="emailValidate()">Validate email</button>
+    </div>
+
+    <script>
+
+        function emailValidate() {
+            var mailValidate = document.getElementById('email').value;
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+
+            if(regx.test(mailValidate)) {
+                document.getElementById('emails').innerHTML = "VALID";
+                document.getElementById('emails').style.color = "green";
+                document.getElementById('emails').style.fontWeight = "bold";
+            } else{
+                document.getElementById('emails').innerHTML = "INVALID";
+                document.getElementById('emails').style.color = "red";
+                document.getElementById('emails').style.fontWeight = "bold";
+            }
+        }
+    </script>
+    
+</body>
+</html>
