@@ -21,5 +21,32 @@
         }
 
     </script>
+
+
+    <div>
+        <h1>Input Vadidation</h1>
+        <p>enter the value between 5 to 10</p>
+        <input type="text" id="funny" >
+        <button onclick="myFunnyFunction()">verify</button>
+        <p id="p01"></p>
+    </div>
+    <script>
+        function myFunnyFunction(){
+            var message, x;
+            message = document.getElementById("p01");
+            message.innerHTML = "";
+            x = document.getElementById("funny").value;
+            try{
+                if(x == "") throw "empty"; 
+                if(isNaN(x)) throw "Not a number";
+                x = Number(x);
+                if(x < 5) throw "too low";
+                if(x > 5) throw "too high";
+            }
+            catch(err){
+                message.innerHTML = "Input is " + err ;
+            }
+        }
+    </script>
 </body>
 </html>
