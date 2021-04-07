@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Timing</title>
+
+</head>
+
+<body>
+    <div>
+    <h1>Timing function </h1>
+    <p>setTimeout and clearTimeout</p> <br>
+
+    <button type="button" onclick="start()">start</button>
+    <p id="demo">hello</p>
+    <button type="button" onclick="stop()">stop</button>
+    </div>
+    <script>
+        var ID = 0;
+        function printMsg(){
+            document.getElementById("demo").innerHTML = "Time have passed five seconds";
+        }
+        function start(){
+            ID = window.setTimeout(printMsg,5000);
+        }
+        function stop(){
+            window.clearTimeout(ID);
+        }
+    </script>
+
+    <div>
+        <p>setInterval and clearInterval</p> <br>
+
+        <button type="button" onclick="starti()">Start</button>
+        <p id="demo1">hi</p>
+        <button type="button" onclick="stopi()">Stop</button>
+    </div>
+
+    <script>
+        var ide = 0;
+        var second = 0;
+        function printMsgg() {
+            document.getElementById("demo1").innerHTML = "second is " + second ;
+            second++ ;
+        }
+        function starti() {
+            ide = window.setInterval(printMsgg, 1000);
+        }
+        function stopi() {
+            ide = window.clearInterval(ide);
+        }
+    </script>
+    
+</body>
+
+</html>
