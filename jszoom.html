@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js zoom effect</title>
+
+</head>
+
+<body>
+    
+    <h1>js zoomout and zoom in function</h1>
+    <br>
+    <br>
+    <img id="img1" width="200" src="./passport.jpg" 
+    onmouseover="increase()" 
+    onmouseout="decrease()">
+    <br>
+    <script>
+
+        var width = 100;
+        var difference = 2;
+        var intervalID = 0;
+
+        function increase() 
+        {
+            intervalID = setInterval(expand, 20);
+        }
+
+        function expand() 
+        {
+            if(width<200)
+            {
+                width = width + difference ;
+                document.getElementById('img1').style.width = Number(width);
+                console.log(width);
+            }
+            else
+            {
+                clearInterval(intervalID);
+            }
+        }
+        function decrease() 
+        {
+            intervalID = setInterval(shrink,20);
+        }
+        
+        function shrink()
+        {
+            if(width>100)
+            {
+                width  = width - difference ;
+                document.getElementById('img1').style.width = Number(width);
+            }
+            else
+            {
+                clearInterval(intervalID);
+            }
+        }
+    </script>
+
+</body>
+</html>
